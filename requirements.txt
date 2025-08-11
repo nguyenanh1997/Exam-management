@@ -1,0 +1,9 @@
+Flask
+flask_sqlalchemy
+flask_cors
+pymysql
+Flask-JWT-Extended
+pandas
+openpyxl
+cryptography
+flask-restx

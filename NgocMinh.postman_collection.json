@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "9a3f6394-b6f6-42aa-a109-8cf51bf1ac7f",
+		"name": "NgocMinh",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39042575"
+	},
+	"item": [
+		{
+			"name": "4. GetSubjects",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/monhoc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"monhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1. Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"anhn7\",\r\n    \"password\": \"Caibua!997\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"anhn7\",\r\n    \"password\": \"Caibua!997\",\r\n    \"role\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3. Create Subject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODY3MTkxNCwianRpIjoiZmQ4MDVjNzctMTFkYS00YzE5LThhNjgtNTliOWQ4ODlhNGFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQ4NjcxOTE0LCJjc3JmIjoiOTkwNTI0ZTUtZDJiZi00NjMzLTk0ZTItOGE3MTI4MTQ5NjFmIiwiZXhwIjoxNzQ4NjcyODE0LCJ1c2VybmFtZSI6ImFuaG43Iiwicm9sZSI6ImFkbWluIn0.sWltKNULO-aaholmx2eZzTphzTx5KMIQeGWINA9-X3g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/monhoc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"monhoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5. Update Subject",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/monhoc/<int:subject_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"monhoc",
+						"<int:subject_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6. Del Subject",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/monhoc/<int:subject_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"monhoc",
+						"<int:subject_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "7. Assign Subject to User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODY3MTkxNCwianRpIjoiZmQ4MDVjNzctMTFkYS00YzE5LThhNjgtNTliOWQ4ODlhNGFhIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQ4NjcxOTE0LCJjc3JmIjoiOTkwNTI0ZTUtZDJiZi00NjMzLTk0ZTItOGE3MTI4MTQ5NjFmIiwiZXhwIjoxNzQ4NjcyODE0LCJ1c2VybmFtZSI6ImFuaG43Iiwicm9sZSI6ImFkbWluIn0.sWltKNULO-aaholmx2eZzTphzTx5KMIQeGWINA9-X3g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_ids\": [\r\n        1,\r\n        2,\r\n        3,\r\n        4\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/monhoc/<int:subject_id>/assign",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"monhoc",
+						"<int:subject_id>",
+						"assign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "8. Get Subject of User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/monhoc/<int:user_id>/getsubjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"monhoc",
+						"<int:user_id>",
+						"getsubjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "9. Get all question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "10. Create Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"\",\r\n    \"answer\": \"\",\r\n    \"subject_id\": \"\",\r\n    \"difficulty\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "11. Update Question",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"\",\r\n    \"answer\": \"\",\r\n    \"subject_id\": \"\",\r\n    \"difficulty\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/questions/<int:question_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"questions",
+						"<int:question_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "12. Delete Question",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"\",\r\n    \"answer\": \"\",\r\n    \"subject_id\": \"\",\r\n    \"difficulty\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/questions/<int:question_id>",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"questions",
+						"<int:question_id>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "13. Generate Exam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"monhoc_id\": \"<int:monhoc_id>\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/exam/generate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"exam",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "14. Submit exam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"questions\": [\r\n        {\r\n            \"id\": \"<int:id>\",\r\n            \"answer\": \"<string>\"\r\n        },\r\n        {\r\n            \"id\": \"<int:id>\",\r\n            \"answer\": \"<string>\"\r\n        },\r\n        {\r\n            \"id\": \"<int:id>\",\r\n            \"answer\": \"<string>\"\r\n        },\r\n    ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/exam/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"exam",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0ODY4MzMwMSwianRpIjoiYmIxZjM1ZmQtNGUwNy00YTZlLWFkZjUtNjdiY2MwOTU0ODg4IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjEiLCJuYmYiOjE3NDg2ODMzMDEsImNzcmYiOiI2OGFkODVjNC02OGRmLTRhYzUtYmE1OS0yOTM2MTc0OTE2YTAiLCJleHAiOjE3NDg2ODQyMDEsInVzZXJuYW1lIjoiYW5objciLCJyb2xlIjoiYWRtaW4ifQ.nOjaTbGRGFeUc03uEnGKO8uhwZQ2ej5NTg6higYNYew",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
